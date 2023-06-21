@@ -1,0 +1,24 @@
+<h1>DBZ Personajes</h1>
+<hr>
+
+<div class="row">
+  <div class="col">
+
+    <!-- El metodo onDeleteCharacter hace referencia al metodo definido en el main-page.component.ts -->
+    <!-- <app-dbz-list [listPersonajes]="dbzService.characters"
+      (onDeleteCharacter)="dbzService.onDeleteCharacter($event)">
+    </app-dbz-list> -->
+
+    <app-dbz-list [listPersonajes]="characters"
+      (deleteById)="deletePersonaje($event)">
+    </app-dbz-list>
+
+  </div>
+
+  <div class="col">
+    <app-dbz-add-character
+      (onNewCharacter)="newPersonaje($event)" >
+
+    </app-dbz-add-character>
+  </div>
+</div>
